@@ -1,0 +1,6 @@
+[
+  {"id":"train-total-a","split":"train","prompt":"Return only the total of 2 and 3.","answer":"5","public_metadata":{"numbers":[2,3]}},
+  {"id":"train-total-b","split":"train","prompt":"Return only the sum of 4 and 7.","answer":"11","public_metadata":{"numbers":[4,7]}},
+  {"id":"val-total-c","split":"val","prompt":"Return only the total of 8 and 5.","answer":"13","public_metadata":{"numbers":[8,5]}},
+  {"id":"val-total-d","split":"val","prompt":"Return only the sum of 6 and 9.","answer":"15","public_metadata":{"numbers":[6,9]}}
+]

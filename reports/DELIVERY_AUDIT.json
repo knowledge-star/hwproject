@@ -1,0 +1,17 @@
+{
+  "packaging": "explicit allowlist",
+  "literal_secret_scan_passed": true,
+  "excluded": [
+    ".venv",
+    "runs",
+    "build",
+    "*.egg-info",
+    "__pycache__",
+    "original datasets",
+    "original trajectories",
+    "runtime binaries",
+    "credential files"
+  ],
+  "synthetic_examples_only": true,
+  "original_projects_modified": false
+}

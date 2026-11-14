@@ -1,0 +1,7 @@
+{
+  "version":"synthetic-seed",
+  "base_skill":"Answer the current public task. Use the available evidence and return the requested output shape.",
+  "cards":[],
+  "config":{"routing":"topk","topk":6,"contract":false,"progress":false},
+  "provenance":{"status":"Synthetic example, no private training data"}
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "active_skills": [
+    "portable-skill"
+  ],
+  "version": "OpenClaw 2026.6.9 (c645ec4)",
+  "model_calls": 0,
+  "real_agent_execution": false
+}

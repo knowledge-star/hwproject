@@ -1,0 +1,27 @@
+{
+  "winner": "round-001",
+  "policy": "officeqa",
+  "ranking": [
+    {
+      "name": "round-001",
+      "successes": 2.0,
+      "mean_requests": 1.0,
+      "mean_reward": 1.0,
+      "skill_bytes": 1061,
+      "body_chars": 285
+    },
+    {
+      "name": "seed",
+      "successes": 0.0,
+      "mean_requests": 1.0,
+      "mean_reward": 0.0,
+      "skill_bytes": 351,
+      "body_chars": 97
+    }
+  ],
+  "validation_ids": [
+    "val-total-c",
+    "val-total-d"
+  ],
+  "test_accessed": false
+}

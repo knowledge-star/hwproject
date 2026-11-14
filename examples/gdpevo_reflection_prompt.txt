@@ -1,0 +1,11 @@
+Analyze the supplied TRAIN inputs, native tool trajectories, official TRAIN references and scores.
+Extract transferable executable business SOPs supported by actual evidence: API pagination/filtering,
+joins, business-rule precedence and exceptions, numerical semantics, write-action verification and JSON
+schema checks. Separate business rules from accidental reference artifacts. State uncertainty.
+Never infer hidden evaluator internals. Do not copy answers, task-specific IDs/entities/amounts/dates
+or examples. Business thresholds and API/field names are allowed only when public Train evidence
+supports them. Never include judge paths/instructions, grading transcripts, host files or proxy URLs.
+Output ONLY JSON {"patch":{"reasoning":"...","edits":[{"op":"append","content":"JSON_STRING"}]}}.
+Each JSON_STRING encodes exactly {"title":"...","trigger":["..."],"body":"Concrete steps, evidence,
+rule precedence, completion checks and failure boundaries","required_operations":[]}.
+At most 8 append edits. Zero edits is legal. Do not assume OfficeQA-specific rules.

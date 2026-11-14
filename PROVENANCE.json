@@ -1,0 +1,528 @@
+{
+  "schema": 1,
+  "imports_namespace": "skill_optimizer._vendor.skillopt",
+  "records": [
+    {
+      "source": "SkillOpt/skillopt/__init__.py",
+      "source_sha256": "acde34f209004e93450198fbcc4cf5f161e5079c53e5e38492d934e42347995c",
+      "destination": "src/skill_optimizer/_vendor/skillopt/__init__.py",
+      "destination_sha256": "598987e1299ee82fd778036c75adf1384d7ac3e8e8f4f007157679080cedbe1d",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/types.py",
+      "source_sha256": "f8f425c44f352255dd36a5bd6438ae0aafbc671d5e84af349ccb32c9674fddfa",
+      "destination": "src/skill_optimizer/_vendor/skillopt/types.py",
+      "destination_sha256": "9f0674b433c706aaf57cefe88518b50a5928e51863fdf7b8f14b7e79cef9b19f",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/gradient/reflect.py",
+      "source_sha256": "e58205c4b13ee7c565a214a01e8dcde6076c7cccbfa8240bd68d4c3481e1e1c5",
+      "destination": "src/skill_optimizer/_vendor/skillopt/gradient/reflect.py",
+      "destination_sha256": "3fae801e0d1069dd323a9c5e9c52c6ac75f360129609e45c90b7ec659f4f1112",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/optimizer/skill.py",
+      "source_sha256": "1cb3ecd9da7ab5ea89ad86780f3e4536fcf5cda84455ea6ae8fcc9c86cc73d3f",
+      "destination": "src/skill_optimizer/_vendor/skillopt/optimizer/skill.py",
+      "destination_sha256": "030ce389a33c377937724650123c971b0ad4a63ea02fed6f8d9dc2f963a9a179",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/optimizer/meta_skill.py",
+      "source_sha256": "a9b02bded86aca1575bf8647d85c55808fbe12162b5de69ca91c3ef2b7424b6d",
+      "destination": "src/skill_optimizer/_vendor/skillopt/optimizer/meta_skill.py",
+      "destination_sha256": "69861cf581b4151495478679bbeb8976d09d23a4eb783b45c3fc90011fc24495",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/optimizer/slow_update.py",
+      "source_sha256": "fc195c1691711b0a00799f6f9ef33ca7feb78ff34fc195e9aab876c4f8b32a58",
+      "destination": "src/skill_optimizer/_vendor/skillopt/optimizer/slow_update.py",
+      "destination_sha256": "1c4cb7919b2fc9ada6d4f969b0c99004d2dd79bb63964edc6bf09e1edafdc934",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/optimizer/skill_aware.py",
+      "source_sha256": "ea37beb95056ac52a61167153a2e05b05692d55fbe2b3bcfb039516801f0b418",
+      "destination": "src/skill_optimizer/_vendor/skillopt/optimizer/skill_aware.py",
+      "destination_sha256": "3d781d51b04b9700a16520c046486c71536d1e572e9c869ff3dcfec1966715fc",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/optimizer/update_modes.py",
+      "source_sha256": "37c15553afd820a94216caadfe80d29a9cbfca7c01dacee3b628e439830d8841",
+      "destination": "src/skill_optimizer/_vendor/skillopt/optimizer/update_modes.py",
+      "destination_sha256": "37c15553afd820a94216caadfe80d29a9cbfca7c01dacee3b628e439830d8841",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/optimizer/clip.py",
+      "source_sha256": "0c1060799884eb32e131000299ae78af094ee375d9c81c3dd1e1e2c78bd3c728",
+      "destination": "src/skill_optimizer/_vendor/skillopt/optimizer/clip.py",
+      "destination_sha256": "cdc6fe3885ffd5dd64fffe89515ba39a0fa9654bcc32ba88564c9da134722f74",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/utils/json_utils.py",
+      "source_sha256": "77d06263ab9dd6537c52c80a7cd4614d2a0362ed933407725a032bb095738589",
+      "destination": "src/skill_optimizer/_vendor/skillopt/utils/json_utils.py",
+      "destination_sha256": "77d06263ab9dd6537c52c80a7cd4614d2a0362ed933407725a032bb095738589",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/utils/scoring.py",
+      "source_sha256": "f5756974a6d0f62f45bc408cc18ea13376eb1ab6592a351e8722d53860fcb8e9",
+      "destination": "src/skill_optimizer/_vendor/skillopt/utils/scoring.py",
+      "destination_sha256": "f5756974a6d0f62f45bc408cc18ea13376eb1ab6592a351e8722d53860fcb8e9",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/utils/__init__.py",
+      "source_sha256": "7a2f608332c095057fa82173f4841dee1d6f9f7a127b35a4770bf418319bc5f0",
+      "destination": "src/skill_optimizer/_vendor/skillopt/utils/__init__.py",
+      "destination_sha256": "c48012b09259df73a9a38ffbf9cc883c00c48a741d41869292b40b5bb20587cf",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/evaluation/gate.py",
+      "source_sha256": "3c2405f13288e97f53afa0bdfc0752ba6917c51edd1904a810deb4b5a1a81bef",
+      "destination": "src/skill_optimizer/_vendor/skillopt/evaluation/gate.py",
+      "destination_sha256": "3c2405f13288e97f53afa0bdfc0752ba6917c51edd1904a810deb4b5a1a81bef",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/datasets/base.py",
+      "source_sha256": "82a68f80271fadb4947f49b81a27cf03af08af61ed85d5326381a7955d0da48b",
+      "destination": "src/skill_optimizer/_vendor/skillopt/datasets/base.py",
+      "destination_sha256": "82a68f80271fadb4947f49b81a27cf03af08af61ed85d5326381a7955d0da48b",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/datasets/__init__.py",
+      "source_sha256": "39a907e5207f3daa2477a4b3f9b01395fbadd43918f22ecdb8d4c132958467e7",
+      "destination": "src/skill_optimizer/_vendor/skillopt/datasets/__init__.py",
+      "destination_sha256": "787886bf2aa4b4f1b4beb9bbae820e8c039e21b97b915a6a3c246ac277aef0b5",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/envs/task_output.py",
+      "source_sha256": "b01698910e0c69f2db5bb77003a7b10fd6b3c2e98e2c839d48b75cadbcd0327a",
+      "destination": "src/skill_optimizer/_vendor/skillopt/envs/task_output.py",
+      "destination_sha256": "b01698910e0c69f2db5bb77003a7b10fd6b3c2e98e2c839d48b75cadbcd0327a",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/__init__.py",
+      "source_sha256": "50c017a18c35d990bf24d5efa4019aaa13bb3ef8db0e2b50dcab5c923a376455",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/__init__.py",
+      "destination_sha256": "50c017a18c35d990bf24d5efa4019aaa13bb3ef8db0e2b50dcab5c923a376455",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/analyst_error.md",
+      "source_sha256": "40eaf561c7fdbdfc1c7a1febd9f7c3540270ca6d5e7e0a8798c7c90b8d303200",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/analyst_error.md",
+      "destination_sha256": "40eaf561c7fdbdfc1c7a1febd9f7c3540270ca6d5e7e0a8798c7c90b8d303200",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/analyst_error_full_rewrite.md",
+      "source_sha256": "a81389ca63e75f13d6aca4d2f01cd6825a364e9cca833f316de125014a2f7365",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/analyst_error_full_rewrite.md",
+      "destination_sha256": "a81389ca63e75f13d6aca4d2f01cd6825a364e9cca833f316de125014a2f7365",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/analyst_error_rewrite.md",
+      "source_sha256": "c393358b2be63d49bc8400944f17bcfb45f58aed5959cf6a46c2e1c1caefcd1b",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/analyst_error_rewrite.md",
+      "destination_sha256": "c393358b2be63d49bc8400944f17bcfb45f58aed5959cf6a46c2e1c1caefcd1b",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/analyst_success.md",
+      "source_sha256": "0ffc8f85e13af2b14e1b9f3307a44d30ecf60e9d803ccb9190fdd9785e43fabc",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/analyst_success.md",
+      "destination_sha256": "0ffc8f85e13af2b14e1b9f3307a44d30ecf60e9d803ccb9190fdd9785e43fabc",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/analyst_success_full_rewrite.md",
+      "source_sha256": "359a7481e348a89d51e5c7ee60a3d4d1d7a5ce7fdd8193d490c64f2667aeec55",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/analyst_success_full_rewrite.md",
+      "destination_sha256": "359a7481e348a89d51e5c7ee60a3d4d1d7a5ce7fdd8193d490c64f2667aeec55",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/analyst_success_rewrite.md",
+      "source_sha256": "758bfe107d15ba1b5318f7191ea9e965fb09982b12599d62fee9db0d823f22f0",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/analyst_success_rewrite.md",
+      "destination_sha256": "758bfe107d15ba1b5318f7191ea9e965fb09982b12599d62fee9db0d823f22f0",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/lr_autonomous.md",
+      "source_sha256": "667c78c7873a28fae0e6f47c5c6ed556d76dfe337c74da986757c9e4fadb1f0e",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/lr_autonomous.md",
+      "destination_sha256": "667c78c7873a28fae0e6f47c5c6ed556d76dfe337c74da986757c9e4fadb1f0e",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/merge_failure.md",
+      "source_sha256": "071313895da226840164ccda6e7f01d5f849ea128037d3f337cddab66ae799db",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/merge_failure.md",
+      "destination_sha256": "071313895da226840164ccda6e7f01d5f849ea128037d3f337cddab66ae799db",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/merge_failure_full_rewrite.md",
+      "source_sha256": "adef4b6e8f0b1d7cf992e4bd9a34f633375b122cc054477c305a228627ec79ae",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/merge_failure_full_rewrite.md",
+      "destination_sha256": "adef4b6e8f0b1d7cf992e4bd9a34f633375b122cc054477c305a228627ec79ae",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/merge_failure_rewrite.md",
+      "source_sha256": "e9cd2289d8515bca4561e52d3c8da14a2fe97d1b2e77d50f0d34f2fb257326c1",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/merge_failure_rewrite.md",
+      "destination_sha256": "e9cd2289d8515bca4561e52d3c8da14a2fe97d1b2e77d50f0d34f2fb257326c1",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/merge_final.md",
+      "source_sha256": "b2c7b452032fbbe3b223e877b766ea6202775d685c3b32e68956a402e775b84b",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/merge_final.md",
+      "destination_sha256": "b2c7b452032fbbe3b223e877b766ea6202775d685c3b32e68956a402e775b84b",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/merge_final_full_rewrite.md",
+      "source_sha256": "21ee282d5720dd07dcea9ddd3cce2de893adeeed51518a0c241590130f1635bd",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/merge_final_full_rewrite.md",
+      "destination_sha256": "21ee282d5720dd07dcea9ddd3cce2de893adeeed51518a0c241590130f1635bd",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/merge_final_rewrite.md",
+      "source_sha256": "6a79e19eebe2fbbe20f93a6b864c7c157388bbae168980154c0cdac452bbdfe4",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/merge_final_rewrite.md",
+      "destination_sha256": "6a79e19eebe2fbbe20f93a6b864c7c157388bbae168980154c0cdac452bbdfe4",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/merge_success.md",
+      "source_sha256": "6b816bcf5526d31164b779921f3c8c847541bf92fbe26c6a38b555eb3b753712",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/merge_success.md",
+      "destination_sha256": "6b816bcf5526d31164b779921f3c8c847541bf92fbe26c6a38b555eb3b753712",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/merge_success_full_rewrite.md",
+      "source_sha256": "8f1339cd57ed41af82f8ac7675891a9a58412b5c7ef4e6762a12ad8caad347ca",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/merge_success_full_rewrite.md",
+      "destination_sha256": "8f1339cd57ed41af82f8ac7675891a9a58412b5c7ef4e6762a12ad8caad347ca",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/merge_success_rewrite.md",
+      "source_sha256": "2b293d9a16da199cade8bdade560b12553577ad66aacb0f9de3ae979aa150ab7",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/merge_success_rewrite.md",
+      "destination_sha256": "2b293d9a16da199cade8bdade560b12553577ad66aacb0f9de3ae979aa150ab7",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/meta_skill.md",
+      "source_sha256": "b2bab7f7635cd2a94348de6adf15ceaa247ddabd0a2a8bb7c53eab5cfca7deba",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/meta_skill.md",
+      "destination_sha256": "b2bab7f7635cd2a94348de6adf15ceaa247ddabd0a2a8bb7c53eab5cfca7deba",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/ranking.md",
+      "source_sha256": "8bf37725b7b328d8d54af7a8fb173179bdd0f02b57399ed2cc7a5b5d25edea8a",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/ranking.md",
+      "destination_sha256": "8bf37725b7b328d8d54af7a8fb173179bdd0f02b57399ed2cc7a5b5d25edea8a",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/ranking_rewrite.md",
+      "source_sha256": "2ff8c755188704352cb7dd5c57bbce66c506145a5a5cd212b8881bd09d608031",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/ranking_rewrite.md",
+      "destination_sha256": "2ff8c755188704352cb7dd5c57bbce66c506145a5a5cd212b8881bd09d608031",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/rewrite_skill.md",
+      "source_sha256": "2da412ee1d92ab32e59f8a33e2816a2c315edef5e2906d7628d8d093ae0dc68a",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/rewrite_skill.md",
+      "destination_sha256": "2da412ee1d92ab32e59f8a33e2816a2c315edef5e2906d7628d8d093ae0dc68a",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "SkillOpt/skillopt/prompts/slow_update.md",
+      "source_sha256": "7f6f97d2283a370ad072a91ad61e152551f4f4eb4f519c9a1c5c60679b4782f2",
+      "destination": "src/skill_optimizer/_vendor/skillopt/prompts/slow_update.md",
+      "destination_sha256": "7f6f97d2283a370ad072a91ad61e152551f4f4eb4f519c9a1c5c60679b4782f2",
+      "mode": "namespace_only",
+      "changes": [
+        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+      ]
+    },
+    {
+      "source": "officeqa-skill-research/oqs/learn.py",
+      "source_sha256": "7bdc7eaeb356afb676d4f79e270e0818702d4c0c18e8b4130feb12f9bc908423",
+      "destination": "src/skill_optimizer/research/officeqa.py",
+      "destination_sha256": "b96c09ce0d69838a66e699bb67957e0b31da2dece7867027e95968a3e3db4c6a",
+      "mode": "ast_extraction",
+      "symbols": [
+        "CARD_SYSTEM",
+        "flatten_native",
+        "sanitize_card",
+        "ReflectionRecoveryError",
+        "_CARD_FIELDS",
+        "_OPERATIONS",
+        "_FUSED_APPEND",
+        "_syntax_text",
+        "_repair",
+        "_validate_card",
+        "AuditedReflectionParser"
+      ],
+      "ranges": [
+        [
+          20,
+          36
+        ],
+        [
+          38,
+          68
+        ],
+        [
+          70,
+          84
+        ],
+        [
+          87,
+          88
+        ],
+        [
+          91,
+          91
+        ],
+        [
+          92,
+          93
+        ],
+        [
+          94,
+          94
+        ],
+        [
+          97,
+          101
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          112,
+          125
+        ],
+        [
+          128,
+          216
+        ]
+      ],
+      "changes": [
+        "Imports replaced with portable stdlib/storage",
+        "Operation vocabulary is an optional per-parser parameter; unchanged OfficeQA default"
+      ]
+    },
+    {
+      "source": "officeqa-skill-research/oqs/method.py",
+      "source_sha256": "b1c7bd1579018d241411dcc1ee888edf5813510ecb395443d3517ca79beea897",
+      "destination": "src/skill_optimizer/research/officeqa_routing.py",
+      "destination_sha256": "b1c7bd1579018d241411dcc1ee888edf5813510ecb395443d3517ca79beea897",
+      "mode": "exact_copy"
+    },
+    {
+      "source": "huawei-skill-data-research/experiments/hf_round2/learn.py",
+      "source_sha256": "cf7045608b7f6fd38ec954c733c0f1a9b29bf143bdea314c869842aad783ad2d",
+      "destination": "src/skill_optimizer/research/binary.py",
+      "destination_sha256": "9f485cc6fd5964d52fe9640c4ad8756b9611989d457f8d2b939798ee22a09aa8",
+      "mode": "ast_extraction",
+      "symbols": [
+        "reflection_native"
+      ],
+      "ranges": [
+        [
+          39,
+          57
+        ]
+      ],
+      "changes": [
+        "Imports made portable only"
+      ]
+    },
+    {
+      "source": "officeqa-skill-research/oqs/learn.py",
+      "source_sha256": "7bdc7eaeb356afb676d4f79e270e0818702d4c0c18e8b4130feb12f9bc908423",
+      "destination": "examples/officeqa_reflection_prompt.txt",
+      "destination_sha256": "e6ed8667585d3331bd1bf5b6872f1f75bd87719ea935cd6b1530740f46a82a28",
+      "mode": "literal_extraction",
+      "symbol": "CARD_SYSTEM"
+    },
+    {
+      "source": "webshop-skill-research/wsr/learn.py",
+      "source_sha256": "cb720de4a5bfbb781d7aaa765a272d385ed99422e389abb216ad27fdfee02371",
+      "destination": "examples/webshop_reflection_prompt.txt",
+      "destination_sha256": "518b5f0f7c78e472aab951856ad3985f24186605862b6fcf62042813538272da",
+      "mode": "literal_extraction",
+      "symbol": "SYSTEM"
+    },
+    {
+      "source": "gdpevo-skill-research/optimizer.py",
+      "source_sha256": "fab6cabeba91ce65cb74badbe668d1ec2d7f1ab9373157b99a3198312911d620",
+      "destination": "examples/gdpevo_reflection_prompt.txt",
+      "destination_sha256": "00df661f14e3284de9c520e40934c5827ab8fd9d6b432900847a180f7471d578",
+      "mode": "literal_extraction",
+      "symbol": "SYSTEM"
+    },
+    {
+      "source": "huawei-skill-data-research/experiments/hf_round2/learn.py",
+      "source_sha256": "cf7045608b7f6fd38ec954c733c0f1a9b29bf143bdea314c869842aad783ad2d",
+      "destination": "examples/huawei_reflection_prompt.txt",
+      "destination_sha256": "6587ce7d58b862049ff000ede297879c355324bb2b9a9b2900a5f2bbafe20331",
+      "mode": "literal_extraction",
+      "symbol": "SYSTEM"
+    },
+    {
+      "source": "SkillOpt/LICENSE",
+      "source_sha256": "9515a04280cf50ce154eb3ab8fa375c7cc5e6b45ea5cb23b7ff3830737020c15",
+      "destination": "licenses/SkillOpt.LICENSE",
+      "destination_sha256": "9515a04280cf50ce154eb3ab8fa375c7cc5e6b45ea5cb23b7ff3830737020c15",
+      "mode": "exact_copy"
+    },
+    {
+      "source": "officeqa-skill-research/LICENSE",
+      "source_sha256": "1877fb5cbb4fc4252bfdaad27d147129165661854f98a54592d8125d140006fb",
+      "destination": "licenses/OfficeQA.LICENSE",
+      "destination_sha256": "1877fb5cbb4fc4252bfdaad27d147129165661854f98a54592d8125d140006fb",
+      "mode": "exact_copy"
+    }
+  ]
+}

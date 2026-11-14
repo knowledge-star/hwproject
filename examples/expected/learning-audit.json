@@ -1,0 +1,26 @@
+{
+  "decisions": [
+    {
+      "patch": 0,
+      "card_id": "learned-2ce93d48adde",
+      "accepted": true,
+      "patch_application": [
+        {
+          "op": "append",
+          "target": "",
+          "content_preview": "For a requested total, add all provided operands using a calculation tool. Inspect the tool result and return only the requested value. Do not use this procedure for a ratio or an average.",
+          "status": "applied_append",
+          "index": 1
+        }
+      ]
+    }
+  ],
+  "learned_count": 1,
+  "train_ids": [
+    "train-total-a",
+    "train-total-b"
+  ],
+  "bank_digest": "deb5b1d3c8e5e479494e993721aa4529522bd7882cef3ded7435f52c33cbdeb7",
+  "validation_in_optimizer": false,
+  "test_accessed": false
+}

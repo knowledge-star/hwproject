@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skill-optimizer-handoff"
+version = "1.0.0"
+description = "Portable current experience-card Skill optimization and Harness adapters"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["json-repair>=0.61,<1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "build>=1,<2"]
+
+[project.scripts]
+skill-optimizer = "skill_optimizer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"skill_optimizer._vendor.skillopt.prompts" = ["*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.setuptools]
+license-files = ["LICENSE", "licenses/*.LICENSE", "THIRD_PARTY_NOTICES.md"]

@@ -1,0 +1,40 @@
+{
+  "version": "learning",
+  "base_skill": "Answer the current public task. Use the available evidence and return the requested output shape.",
+  "cards": [
+    {
+      "title": "Calculate and check totals",
+      "body": "For a requested total, add all provided operands using a calculation tool. Inspect the tool result and return only the requested value. Do not use this procedure for a ratio or an average.",
+      "trigger": [
+        "total",
+        "sum",
+        "合计"
+      ],
+      "required_operations": [
+        "sum"
+      ],
+      "id": "learned-2ce93d48adde",
+      "provenance": [
+        {
+          "split": "train",
+          "train_ids": [
+            "train-total-a",
+            "train-total-b"
+          ],
+          "patch": 0,
+          "source_type": "failure",
+          "reflection_artifact": "raw-patches.json"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "routing": "topk",
+    "topk": 6,
+    "contract": false,
+    "progress": false
+  },
+  "provenance": {
+    "status": "Synthetic example, no private training data"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "tasks":"../examples/tasks.json",
+  "seed_bank":"../examples/seed-bank.json",
+  "reflection_prompt":"../examples/portable_reflection_prompt.txt",
+  "adapter":{"kind":"synthetic"},
+  "judge":{"kind":"exact_match"},
+  "model":{"kind":"synthetic"},
+  "learning":{"minibatch_size":5,"edit_budget":3,"workers":1,"random_seed":20261103},
+  "rounds":1,
+  "selection_policy":"officeqa"
+}

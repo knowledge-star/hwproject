@@ -1,0 +1,194 @@
+{
+  "host": "gpu28",
+  "source_files": [
+    {
+      "path": "officeqa-skill-research/oqs/learn.py",
+      "sha256": "7bdc7eaeb356afb676d4f79e270e0818702d4c0c18e8b4130feb12f9bc908423",
+      "lines": 478
+    },
+    {
+      "path": "officeqa-skill-research/oqs/method.py",
+      "sha256": "b1c7bd1579018d241411dcc1ee888edf5813510ecb395443d3517ca79beea897",
+      "lines": 234
+    },
+    {
+      "path": "officeqa-skill-research/oqs/freeze.py",
+      "sha256": "37071db8924282f143dbb05ef95f5fb6d82ed1efb630006312c4d01a91f339c5",
+      "lines": 142
+    },
+    {
+      "path": "officeqa-skill-research/oqs/episode.py",
+      "sha256": "5812988cfae29d110c8221bf81e6622ef7f24065fc8be4aaab43d218892181da",
+      "lines": 171
+    },
+    {
+      "path": "officeqa-skill-research/oqs/container_entry.py",
+      "sha256": "91e0ec825019199d49ccec3343ae49cfce948dc16800a91b43e90fb612b0120d",
+      "lines": 71
+    },
+    {
+      "path": "officeqa-skill-research/oqs/relay.py",
+      "sha256": "7146c43f9ef7df8f4d75bec0cd70dfd3d6ef1e370fc0c0606253bb0faef78d9a",
+      "lines": 195
+    },
+    {
+      "path": "webshop-skill-research/wsr/fresh_learn.py",
+      "sha256": "15f7cde00cf6277e2fca16aef1f936f2fbc8c9c6b38e40c07eefd6d91c1457ca",
+      "lines": 130
+    },
+    {
+      "path": "webshop-skill-research/wsr/select.py",
+      "sha256": "070abde19a635c9838c6ebfdd3f36d0a5e326c597df0c668605a988fe28d8aa9",
+      "lines": 37
+    },
+    {
+      "path": "webshop-skill-research/wsr/freeze.py",
+      "sha256": "37862819fd83e1fb5a9782f7e9371bdde7d126436ff0a3676771bc6618e48eb5",
+      "lines": 53
+    },
+    {
+      "path": "gdpevo-skill-research/optimizer.py",
+      "sha256": "fab6cabeba91ce65cb74badbe668d1ec2d7f1ab9373157b99a3198312911d620",
+      "lines": 89
+    },
+    {
+      "path": "gdpevo-skill-research/optimizer_batched.py",
+      "sha256": "fd879bfd30a238cfc79e53ab0cc8463f2ae38a7d640b26559d8658e0dd438c65",
+      "lines": 47
+    },
+    {
+      "path": "gdpevo-skill-research/optimizer_syntax.py",
+      "sha256": "bf1cd69107592cd950bf69d490f7fe7ac586a4888d0a9352dcd5d01c84d06d6d",
+      "lines": 20
+    },
+    {
+      "path": "gdpevo-skill-research/business_reflection_syntax.py",
+      "sha256": "bf113bf6b45700164f149432ddab12ae520fd515e6d15435f7cc1760f3e34f13",
+      "lines": 31
+    },
+    {
+      "path": "gdpevo-skill-research/final_train.py",
+      "sha256": "a4f097f197505d86db8573fd05c6a59bce09ea4a21d1b0f314f2d9918fd002cf",
+      "lines": 90
+    },
+    {
+      "path": "huawei-skill-data-research/experiments/hf_round2/learn.py",
+      "sha256": "cf7045608b7f6fd38ec954c733c0f1a9b29bf143bdea314c869842aad783ad2d",
+      "lines": 198
+    },
+    {
+      "path": "huawei-skill-data-research/experiments/hf_next/fit_skill.py",
+      "sha256": "2addb728488976796524e88f3e9f92aed5379ef82b19a0e5178c609fb5c5746c",
+      "lines": 264
+    },
+    {
+      "path": "SkillOpt/skillopt/engine/trainer.py",
+      "sha256": "1f135ebe8c90306c1d1801edc16becd5862e8d7ba5e2b6f0986b8001086b2560",
+      "lines": 2535
+    },
+    {
+      "path": "SkillOpt/skillopt/envs/base.py",
+      "sha256": "ea8c650e8bce460be047a03183cf17fbc49b436345cd1b1484093f763c6c64d7",
+      "lines": 329
+    },
+    {
+      "path": "spreadsheetbench-v2-skill-research/sbv2/learn.py",
+      "sha256": "b293f371a786c064b3fc36d6ac0b42337e009ccb8fb93ce942ddcc809ad180f5",
+      "lines": 128
+    },
+    {
+      "path": "spreadsheetbench-v2-skill-research/recover_learning.py",
+      "sha256": "6edc55a66f4a9b80562ff5da84a1611d51abe592d64d9ca4ba1b1c111f070e29",
+      "lines": 68
+    },
+    {
+      "path": "spreadsheetbench-v2-skill-research/sbv2/prepare.py",
+      "sha256": "16722c5c82aaa27f0fa8e4cf5237de6fcf43da1a4f84889e5d55da62a5326523",
+      "lines": 64
+    }
+  ],
+  "freeze_evidence": [
+    {
+      "path": "officeqa-skill-research/frozen/freeze.json",
+      "sha256": "7b49a82a6c3640d74fea4a7212f3e1e28d46af074725d9f7c6ff9a860298c2a7",
+      "utc": "2026-11-03T04:13:11.252673+00:00",
+      "code_checks": [
+        {
+          "path": "officeqa-skill-research/oqs/learn.py",
+          "matches": true
+        },
+        {
+          "path": "officeqa-skill-research/oqs/method.py",
+          "matches": true
+        },
+        {
+          "path": "officeqa-skill-research/oqs/freeze.py",
+          "matches": true
+        },
+        {
+          "path": "officeqa-skill-research/oqs/episode.py",
+          "matches": true
+        },
+        {
+          "path": "officeqa-skill-research/oqs/container_entry.py",
+          "matches": true
+        },
+        {
+          "path": "officeqa-skill-research/oqs/relay.py",
+          "matches": true
+        }
+      ],
+      "optimizer_script": null,
+      "selected_run": "val-learned-v2-text",
+      "winner": null
+    },
+    {
+      "path": "webshop-skill-research/frozen/final.json",
+      "sha256": "20ea0d5c2aea29f7c1753e3b6d941f47b941b0080074cdc2203f3f54c93c3481",
+      "utc": "2026-11-07T16:19:02.177501+00:00",
+      "code_checks": [
+        {
+          "path": "webshop-skill-research/wsr/fresh_learn.py",
+          "matches": true
+        },
+        {
+          "path": "webshop-skill-research/wsr/select.py",
+          "matches": true
+        },
+        {
+          "path": "webshop-skill-research/wsr/freeze.py",
+          "matches": true
+        }
+      ],
+      "optimizer_script": null,
+      "selected_run": null,
+      "winner": "fresh-routed-v5"
+    },
+    {
+      "path": "gdpevo-skill-research/configs/protocol-freeze.json",
+      "sha256": "28d2323b120f4f7bdd70245ddbed70eb64944263d76757158b411b8fe8d720d9",
+      "utc": "2026-11-03T12:29:45.591069+00:00",
+      "code_checks": [
+        {
+          "path": "gdpevo-skill-research/optimizer_syntax.py",
+          "matches": true
+        },
+        {
+          "path": "gdpevo-skill-research/business_reflection_syntax.py",
+          "matches": true
+        },
+        {
+          "path": "gdpevo-skill-research/optimizer_batched.py",
+          "matches": true
+        }
+      ],
+      "optimizer_script": "optimizer_batched.py",
+      "selected_run": null,
+      "winner": null
+    }
+  ],
+  "private_data_read": false,
+  "credential_files_read": false,
+  "post_work_source_hashes_match": true,
+  "post_work_verified_source_files": 21
+}

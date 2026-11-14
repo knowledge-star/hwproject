@@ -1,0 +1,9 @@
+{
+  "tasks":"../examples/tasks.json",
+  "seed_bank":"../examples/seed-bank.json",
+  "reflection_prompt":"../examples/portable_reflection_prompt.txt",
+  "adapter":{"kind":"command","command":["{python}","{project}/examples/exchange_worker.py","{request}","{response}"],"timeout":30},
+  "judge":{"kind":"exact_match"},
+  "model":{"kind":"synthetic"},
+  "learning":{"workers":1}
+}

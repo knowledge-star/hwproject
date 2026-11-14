@@ -1,0 +1,15 @@
+{
+  "verified_files": 47,
+  "original_source_checked": true,
+  "synthetic_inputs_only": true,
+  "model_calls": 0,
+  "credential_files_read": false,
+  "checks": [
+    "all vendored bytes match source after namespace substitution",
+    "native flattening and duplicate identities",
+    "original instance filters",
+    "original audited parser and syntax recovery",
+    "original card-update block produces identical rules",
+    "original dispatcher has identical model prompts/options and patches"
+  ]
+}

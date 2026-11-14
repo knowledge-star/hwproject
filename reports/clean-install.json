@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "json_repair": "0.64.9",
+  "wheel_import": true,
+  "synthetic_runtime_closed_loop": true,
+  "script_synthetic_runtime_closed_loop": true,
+  "no_research_sys_path": true,
+  "model_calls": 0,
+  "python310_syntax_check": true,
+  "python_runtime_tested": "3.12.16"
+}
