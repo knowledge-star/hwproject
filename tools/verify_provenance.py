@@ -16,6 +16,8 @@ def verify(root, source_root=None):
             assert hashlib.sha256(source.read_bytes()).hexdigest()==row['source_sha256'], row['source']
             if row['mode']=='namespace_only':
                 expected=source.read_bytes().replace(b'from skillopt.',b'from skill_optimizer._vendor.skillopt.').replace(b'from skillopt import',b'from skill_optimizer._vendor.skillopt import')
+                if row.get('normalize_line_endings') == 'lf':
+                    expected=expected.replace(b'\r\n',b'\n')
                 assert target.read_bytes()==expected, 'Unexpected algorithm modification: '+row['destination']
             elif row['mode']=='exact_copy':
                 assert target.read_bytes()==source.read_bytes(), row['destination']

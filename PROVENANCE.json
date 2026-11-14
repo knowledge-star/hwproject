@@ -26,10 +26,12 @@
       "source": "SkillOpt/skillopt/gradient/reflect.py",
       "source_sha256": "e58205c4b13ee7c565a214a01e8dcde6076c7cccbfa8240bd68d4c3481e1e1c5",
       "destination": "src/skill_optimizer/_vendor/skillopt/gradient/reflect.py",
-      "destination_sha256": "3fae801e0d1069dd323a9c5e9c52c6ac75f360129609e45c90b7ec659f4f1112",
+      "destination_sha256": "364c6821f4baf630c7e25a158d86fc64ab868d31d32aa684d94bcd8f474bbe6d",
       "mode": "namespace_only",
+      "normalize_line_endings": "lf",
       "changes": [
-        "Only absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt"
+        "Absolute import namespace changed from skillopt to skill_optimizer._vendor.skillopt",
+        "CRLF line endings normalized to LF for consistent Git checkouts; algorithm text unchanged"
       ]
     },
     {

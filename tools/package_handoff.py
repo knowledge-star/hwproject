@@ -9,7 +9,7 @@ import zipfile
 ROOT=Path(__file__).resolve().parents[1]
 TOP={'README.md','ARCHITECTURE.zh.md','XIAOYI_WORK_ADAPTATION.zh.md','XIAOYI_WORK_RUNBOOK.zh.md','HANDOFF.zh.md',
      'THIRD_PARTY_NOTICES.md','LICENSE','PROVENANCE.json','pyproject.toml','requirements.txt',
-     'requirements-tested.txt','.gitignore'}
+     'requirements-tested.txt','.gitignore','.gitattributes'}
 DIRS={'src','configs','examples','tests','tools','licenses','reports','dist'}
 
 
