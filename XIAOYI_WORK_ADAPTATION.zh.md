@@ -2,6 +2,8 @@
 
 ## 状态与目标
 
+**当前选定路径：**小艺从 GitHub 拉取项目到云沙箱，主会话调度独立回答/反思会话，项目通过文件暂停与恢复；使用现有 Exact Match 和 examples 的两道 Train、两道 Val。`configs/xiaoyi-work.json` 已采用 `file_reflection`，无需模型 API，并预先采用支持未知请求计数的 `webshop` 排序策略。具体执行请优先阅读 [小艺 Work 对话驱动运行说明](XIAOYI_WORK_RUNBOOK.zh.md)。下面的能力清单保留通用适配背景；用户现场检查报告不是本工程直接完成的线上验证。
+
 目标边界是 **Python Optimizer → Harness Adapter → 小艺 Work Main Agent**。本次没有小艺 Work 连接会话，也没有验证其内部 API、Skill 管理、批量任务或轨迹导出；不能把 `XiaoyiWorkAdapter` 或合成 worker 称为真实部署完成。
 
 已经提供的 `adapters/xiaoyi.py` 继承可运行的文件交换协议。接手同学可先人工完成一个真实任务的请求/响应，再把已确认的接口接入 `execute`；无需修改核心反思、解析、补丁和候选选择。
@@ -51,7 +53,7 @@
 python -m skill_optimizer run --config configs/xiaoyi-work.json --output runs/xiaoyi-pilot
 ```
 
-运行前先配置可用的反思模型/授权端点；当前 JSON 中的 `YOUR-*` 均为占位符，不可直接联网使用。也可先将 `model` 改为 `{"kind":"synthetic"}`，只验证文件接口，不能当作真实模型学习。
+当前配置无需端点或密钥。Train 执行与现有评分完成后，还会生成反思请求；由小艺读取对应 `PROMPT.md`，保存原始 JSON 回复，用 `submit-reflection` 提交，再恢复原命令。不要把 `model` 改为 synthetic 后将结果当作小艺真实学习。
 
 缺响应时程序退出3，目录内生成：
 
@@ -97,7 +99,7 @@ round-001/train/<task-id>/exchange/
 
 优先把已有权威 Judge 包成 `Judge.score(task, execution) -> Score`。配置 `judge.kind` 可以是已安装模块的 `module:Class`。Judge 留在宿主，目标 Agent 不应读取标准答案、评测器或 validation reference。
 
-只有外部人工/服务能评分时，使用 `ExternalFeedbackJudge`。响应包含独立的：
+当前示例配置直接使用 `ExactMatchJudge`，无需手工提供评分。只有外部人工/服务能评分时，才切换为 `ExternalFeedbackJudge`。响应包含独立的：
 
 ```json
 {"hard":0,"soft":0.5,"feedback":"可迁移的真实结构化失败原因","qualified":true}

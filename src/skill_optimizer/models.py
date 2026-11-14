@@ -5,6 +5,8 @@ import os
 import threading
 import urllib.request
 from .storage import canonical, digest, dump, immutable, read
+from .adapters.base import PendingExecution
+from .reflection_exchange import FileExchangeReflectionModel
 
 
 class CachedModel:
@@ -13,6 +15,7 @@ class CachedModel:
         self.model, self.directory = model, Path(directory)
         self.lock = threading.Lock()
         self.call_locks = {}
+        self.pending = []
 
     def __call__(self, system, user, **kwargs):
         request = dict(system=system, user=user, options=kwargs, backend=self.model.identity())
@@ -28,12 +31,22 @@ class CachedModel:
                 if data['input_sha256'] != key or data['response_sha256'] != digest(data['text']):
                     raise ValueError('Reflection cache integrity failure')
                 return data['text'], data['usage']
-            marker = folder / 'started.json'
-            if marker.exists():
-                raise RuntimeError(f'Unresolved reflection; inspect {folder}; no automatic retry')
-            dump(marker, dict(input_sha256=key))
-            # Retries supplied by upstream are intentionally not performed by this I/O boundary.
-            text, usage = self.model(system=system, user=user, **kwargs)
+            if isinstance(self.model, FileExchangeReflectionModel):
+                # Preparing a file request is repeatable, and is not an ambiguous API call.
+                try:
+                    text, usage = self.model(system=system, user=user,
+                                             exchange_directory=folder / 'exchange', **kwargs)
+                except PendingExecution as exc:
+                    with self.lock:
+                        self.pending.append(str(exc))
+                    raise
+            else:
+                marker = folder / 'started.json'
+                if marker.exists():
+                    raise RuntimeError(f'Unresolved reflection; inspect {folder}; no automatic retry')
+                dump(marker, dict(input_sha256=key))
+                # Ambiguous remote calls are never automatically reissued.
+                text, usage = self.model(system=system, user=user, **kwargs)
             if not isinstance(text, str) or not text.strip():
                 raise ValueError('Empty reflection response; retained unresolved call')
             dump(result, dict(input_sha256=key, text=text, usage=usage, response_sha256=digest(text)))

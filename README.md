@@ -4,6 +4,17 @@
 
 **已验证：**原源码一致性、核心测试、合成运行环境中的完整闭环、真实 OpenClaw CLI 的离线 Skill 发现。**未验证：**付费模型下的新 Agent rollout、小艺 Work 的 API、轨迹导出和原生 Skill 更新。Mock 响应不代表模型学习效果。
 
+## 小艺 Work 对话驱动试跑
+
+当前小艺接入采用 **GitHub 拉取项目 → 小艺在云沙箱运行 Python → 对话处理回答/反思请求 → 原命令恢复**。无需小艺模型 API。已配置现有 Exact Match 评分器、`examples/tasks.json` 的两道 Train 和两道 Val、一轮优化；正式数据随后从 GitHub 更新并使用新的运行目录。
+
+```bash
+python -m skill_optimizer run --config configs/xiaoyi-work.json --output runs/xiaoyi-pilot
+python -m skill_optimizer pending --output runs/xiaoyi-pilot
+```
+
+退出码 3 表示等待小艺处理文件，不是运行失败。回答用 `examples/complete_request.py` 提交，反思用 `submit-reflection` 提交，然后恢复原 run 命令。完整操作、证据要求、部署和可粘贴指令见 [小艺运行说明](XIAOYI_WORK_RUNBOOK.zh.md)。自动测试使用离线夹具，小艺现场试跑尚待完成；简单示例不保证优化后成绩提高。
+
 ## 安装与最小闭环
 
 Python ≥3.10；本次实际使用 Linux / Python 3.12.16。核心只有 `json-repair` 外部依赖，不要求 GPU、Docker、Office 软件或任何 Benchmark 数据。
@@ -39,7 +50,7 @@ python -m skill_optimizer run --config configs/mock.json --output runs/demo
 | `configs/script.json` | 真正启动外部 Python 进程交换 JSON；worker 仍是合成环境 | 否 |
 | `configs/file-exchange.json` | 请求文件/人工响应/恢复原命令 | 取决于响应是否来自真实目标环境 |
 | `configs/openclaw.json` | 本地 OpenClaw 原生 CLI + 原生 JSONL + 请求计数中继 | 本次仅离线发现检查通过，真实推理待验证 |
-| `configs/xiaoyi-work.json` | 小艺 Work 人工文件交换骨架 + 外部 Judge | 待适配，未声称内部 API 存在 |
+| `configs/xiaoyi-work.json` | 小艺回答/反思文件交换 + 现有 Exact Match；示例数据 | 对话驱动流程已实现，真实小艺会话待现场验收 |
 
 ```bash
 python -m skill_optimizer run --config configs/script.json --output runs/script-demo
@@ -90,7 +101,7 @@ python -m skill_optimizer run --config configs/openclaw.json --output runs/openc
 
 生产 Judge 使用已有权威评分器，返回 `Score(hard, soft, feedback, qualified)`。`hard` 是严格成功 0/1，`soft` 保留部分分；基础设施问题不能标为正常失败用于学习。新增 Judge 示例见 `examples/new_judge.py`。配置 `kind` 支持已安装包中的 `your_package.module:Class`，同样可扩展 Harness 与反思模型。
 
-反思模型接口沿用上游 `(system, user, **kwargs) -> (text, usage)`。默认示例使用固定响应；生产可切换 `openai_compatible`，或注入现有模型客户端。客户端不自动重试含糊失败，以免重复付费。
+反思模型接口沿用上游 `(system, user, **kwargs) -> (text, usage)`。Mock 示例使用固定响应；小艺配置使用 `file_reflection`，由对话中的小艺处理文件请求，无需模型 API。也可切换 `openai_compatible`，或注入现有模型客户端。客户端不自动重试含糊失败，以免重复付费。
 
 领域提示词独立配置。`examples/officeqa_reflection_prompt.txt` 等四份是原源码中的提示词；`portable_reflection_prompt.txt` 是迁移示例，**更换提示词需要重新验证效果**。默认过滤规则仍来自 OfficeQA，业务领域若允许年份/阈值，不能直接宣称此过滤与 GDP 原分支等价。
 

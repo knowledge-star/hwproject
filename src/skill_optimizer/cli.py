@@ -49,6 +49,7 @@ def load_config(path):
     model_spec = dict(cfg['model'])
     model = _build(model_spec.pop('kind'), model_spec, {
         'synthetic': 'skill_optimizer.models:SyntheticReflectionModel',
+        'file_reflection': 'skill_optimizer.reflection_exchange:FileExchangeReflectionModel',
         'openai_compatible': 'skill_optimizer.models:OpenAICompatibleModel'})
     learning = dict(cfg.get('learning', {}))
     if 'operations' in learning:
@@ -72,6 +73,12 @@ def main(argv=None):
     probe = subs.add_parser('probe-openclaw')
     probe.add_argument('--output', required=True, type=Path)
     probe.add_argument('--command', dest='cli_command', nargs='+', default=['openclaw'])
+    pending = subs.add_parser('pending', help='List file requests for the conversation controller')
+    pending.add_argument('--output', required=True, type=Path)
+    submit = subs.add_parser('submit-reflection', help='Bind an actual reflection reply to its request')
+    submit.add_argument('--request', required=True, type=Path)
+    submit.add_argument('--reply', required=True, type=Path)
+    submit.add_argument('--metadata', type=Path, help='Actual session/evidence metadata JSON object')
     args = parser.parse_args(argv)
     try:
         if args.command == 'run':
@@ -84,6 +91,15 @@ def main(argv=None):
             args.output.parent.mkdir(parents=True, exist_ok=True)
             args.output.write_text(text, encoding='utf-8')
             print(json.dumps(dict(path=str(args.output), **metadata), ensure_ascii=False))
+        elif args.command == 'pending':
+            from .reflection_exchange import exchange_status
+            print(json.dumps(exchange_status(args.output), ensure_ascii=False, indent=2))
+        elif args.command == 'submit-reflection':
+            from .reflection_exchange import write_reflection_response
+            metadata = read(args.metadata) if args.metadata else {}
+            if not isinstance(metadata, dict):
+                raise ValueError('Reflection metadata must be an object')
+            print(write_reflection_response(args.request, args.reply.read_text(encoding='utf-8'), metadata))
         else:
             from .adapters.openclaw import OpenClawAdapter
             bank = dict(version='probe', base_skill='Inspect current evidence before producing an answer.',

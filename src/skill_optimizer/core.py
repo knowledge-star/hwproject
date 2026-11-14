@@ -16,6 +16,7 @@ from ._vendor.skillopt.gradient import reflect as reflect_source
 from ._vendor.skillopt.optimizer.skill import apply_patch_with_report
 from ._vendor.skillopt.types import RawPatch
 from .models import CachedModel
+from .adapters.base import PendingExecution
 from .research.officeqa import AuditedReflectionParser, sanitize_card
 from .research.binary import reflection_native
 from .research import officeqa_routing as routing
@@ -53,7 +54,20 @@ def _reflector(model, parser):
     spec = importlib.util.spec_from_file_location('skillopt_reflect_' + uuid.uuid4().hex, reflect_source.__file__)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    module.chat_optimizer, module.extract_json = model, parser
+    def call_model(*args, **kwargs):
+        try:
+            return model(*args, **kwargs)
+        except PendingExecution:
+            # Upstream catches ordinary exceptions as failed reflections. Let it
+            # finish dispatching batches without manufacturing a patch or traceback.
+            return '', {}
+
+    def parse_reply(text):
+        if text == '' and model.pending:
+            return None
+        return parser(text)
+
+    module.chat_optimizer, module.extract_json = call_model, parse_reply
     return module
 
 
@@ -115,6 +129,8 @@ def learn(experiences, seed_bank, output, model, system_prompt, config=None):
               workers=config.workers, failure_only=config.failure_only, minibatch_size=config.minibatch_size,
               edit_budget=config.edit_budget, random_seed=config.random_seed, error_system=system_prompt,
               success_system=system_prompt, skill_aware_reflection=False)
+    if cached.pending:
+        raise PendingExecution('\n'.join(cached.pending))
     expected = sum((sum(bool(r['hard']) == kind for r in results) + config.minibatch_size - 1) // config.minibatch_size
                    for kind in ([False] if config.failure_only else [True, False]))
     if len(patches) != expected or any(p is None for p in patches):
